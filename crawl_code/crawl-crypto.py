@@ -22,7 +22,7 @@ def fetch_top_coins():
     # Lưu dữ liệu kèm timestamp
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"crypto_data_{timestamp}.csv"
-    folder = "data_crawl"
+    folder = "../data_crawl"
     os.makedirs(folder, exist_ok=True)
 
     df.to_csv(f"{folder}/{filename}", index=False)
