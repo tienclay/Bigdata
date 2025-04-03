@@ -2,3 +2,5 @@ hadoop.env
 venv
 .ipynb_checkpoints
 .env
+notebook/metastore_db
+notebook/derby.log
