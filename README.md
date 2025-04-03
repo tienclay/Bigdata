@@ -6,8 +6,9 @@ This project is designed to manage a big data environment using Docker, Hadoop, 
 
 1. [Requirements](#requirements)
 2. [Makefile Targets](#makefile-targets)
-3. [How to Setup](#how-to-setup)
-4. [Connect Apache Hive to PowerBI in Windows](#connect-apache-hive-to-powerbi-in-windows)
+3. [Architecture](#architecture)
+4. [How to Setup](#how-to-setup)
+5. [Connect Apache Hive to PowerBI in Windows](#connect-apache-hive-to-powerbi-in-windows)
 
 ## Requirements
 
@@ -43,6 +44,10 @@ Retrieves the Jupyter Notebook server token. This is useful for accessing the Ju
 
 ### 7. `down`
 Stops and removes the running Docker containers associated with the project.
+
+## Architecture
+
+   ![architecture](images/architecture.png) 
 
 ## How to Setup
 
