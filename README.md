@@ -2,12 +2,20 @@
 
 This project is designed to manage a big data environment using Docker, Hadoop, Apache Spark, and Jupyter Notebook. The Makefile provided automates several tasks such as starting and stopping Docker containers, updating environment variables, and interacting with HDFS.
 
+## Table of Contents
+
+1. [Requirements](#requirements)
+2. [Makefile Targets](#makefile-targets)
+3. [How to Setup](#how-to-setup)
+4. [Connect Apache Hive to PowerBI in Windows](#connect-apache-hive-to-powerbi-in-windows)
+
 ## Requirements
 
 - Docker and Docker Compose installed
 - Apache Spark, Jupyter Notebook, and Hadoop containers setup
 - Docker-based environment for running Spark jobs and Jupyter Notebooks
 - A directory containing data to be processed (`./data_crawl`)
+- Power BI on Windows for visualization
 
 ## Makefile Targets
 
@@ -36,7 +44,7 @@ Retrieves the Jupyter Notebook server token. This is useful for accessing the Ju
 ### 7. `down`
 Stops and removes the running Docker containers associated with the project.
 
-## How to Use
+## How to Setup
 
 1. **Start the environment:**
    To start the Docker containers, use the following command:
@@ -55,3 +63,30 @@ Stops and removes the running Docker containers associated with the project.
    To stop all running Docker containers and services, use the following command:
    ```bash
    make down
+
+## Connect Apache Hive to PowerBI in Windows
+
+Source: https://medium.com/emorphis-technologies/how-to-connect-microsoft-power-bi-with-hive-a778a1fdd234
+
+1. **Download Hive OBDC Driver:**
+   From this link: https://www.microsoft.com/en-us/download/details.aspx?id=40886
+2. **Config ODBSC:**
+   
+   Go to the Configure: 
+
+   ![odbc-dsn](images/odbc-dsn.png) 
+
+   Setup config:
+
+   ![odbc-config](images/odbc-config.png) 
+
+   Test:
+
+   ![odbc-sucess](images/odbc-success.png) 
+
+   Then Click to OK -> OK
+3. **Connect to PowerBI:**
+   
+   PowerBI Home -> Get Data -> More -> Other -> ODBC -> Sample Microsoft Hive DSN -> OK
+
+   ![powerbi-connected](images/powerbi-connected.png) 

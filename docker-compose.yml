@@ -121,9 +121,14 @@ services:
       SERVICE_PRECONDITION: "namenode:9870 datanode1:9864 datanode2:9864 hive-metastore-postgresql:5432"
     ports:
       - "9083:9083"
+    volumes:
+     - hive_metastore_data:/opt/hive-metastore/data
+    
   hive-metastore-postgresql:
     image: bde2020/hive-metastore-postgresql:2.3.0
     container_name: hive-metastore-postgresql
+    volumes:
+    - postgres_data:/var/lib/postgresql/data
 
 networks:
   default:
@@ -134,3 +139,5 @@ volumes:
   hadoop_datanode1:
   hadoop_datanode2:
   hadoop_historyserver:
+  postgres_data:
+  hive_metastore_data:
