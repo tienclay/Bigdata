@@ -1,3 +1,4 @@
 hadoop.env
 venv
 .ipynb_checkpoints
+.env
