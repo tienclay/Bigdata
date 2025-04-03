@@ -106,7 +106,7 @@ services:
     env_file:
       - ./hadoop.env
     environment:
-      HIVE_CORE_CONF_javax_jdo_option_ConnectionURL: "jdbc:postgresql://hive-metastore/metastore"
+      HIVE_CORE_CONF_javax_jdo_option_ConnectionURL: "jdbc:postgresql://hive-metastore/metastore" 
       SERVICE_PRECONDITION: "hive-metastore:9083"
     ports:
       - "10000:10000"
@@ -118,22 +118,16 @@ services:
       - ./hadoop.env
     command: /opt/hive/bin/hive --service metastore
     environment:
-      HIVE_CORE_CONF_javax_jdo_option_ConnectionURL: "jdbc:postgresql://hive-metastore-postgresql:5432/metastore"
-      HIVE_CORE_CONF_javax_jdo_option_ConnectionDriverName: "org.postgresql.Driver"
-      HIVE_CORE_CONF_javax_jdo_option_ConnectionUserName: "hive"
-      HIVE_CORE_CONF_javax_jdo_option_ConnectionPassword: "hive"
       SERVICE_PRECONDITION: "namenode:9870 datanode1:9864 datanode2:9864 hive-metastore-postgresql:5432"
     ports:
       - "9083:9083"
   hive-metastore-postgresql:
-    container_name: hive-metastore-postgresql
     image: bde2020/hive-metastore-postgresql:2.3.0
-    environment:
-      POSTGRES_DB: metastore
-      POSTGRES_USER: hive
-      POSTGRES_PASSWORD: hive
-    ports:
-    - "5432:5432"
+    container_name: hive-metastore-postgresql
+
+networks:
+  default:
+    driver: bridge
 
 volumes:
   hadoop_namenode:
