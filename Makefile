@@ -1,7 +1,7 @@
 CURRENT_DIR := $(shell pwd)
 NOTEBOOK_DIR := $(shell pwd)/notebook
 
-all: compose-up .jupyter-permission
+all: up .jupyter-permission
 
 push2hdfs:
 	docker cp ./data_crawl namenode:data_crawl
@@ -19,10 +19,10 @@ push2hdfs:
 jupyter-token:
 	docker exec -it pyspark-notebook jupyter server list
 
-compose-up: .update-env 
+up: .update-env 
 	@echo "Starting Docker Compose..."
 	CURRENT_NOTEBOOK_DIR=$(NOTEBOOK_DIR) docker compose up -d
 	
-compose-down:
+down:
 	@echo "Stopping Docker Compose..."
 	docker compose down
