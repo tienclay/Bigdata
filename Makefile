@@ -5,6 +5,7 @@ all: up .jupyter-permission
 
 push2hdfs:
 	docker cp ./data_crawl namenode:data_crawl
+	docker exec namenode sh -c 'hdfs dfsadmin -safemode leave || echo "Not in safe mode"'
 	docker exec namenode sh -c 'hdfs dfs -test -d /user/root || (echo "Creating /user/root in HDFS..." && hdfs dfs -mkdir -p /user/root)'
 	docker exec namenode hdfs dfs -put data_crawl /user/root/
 

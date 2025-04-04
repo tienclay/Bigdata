@@ -55,20 +55,25 @@ Stops and removes the running Docker containers associated with the project.
    To start the Docker containers, use the following command:
    ```bash
    make 
+   ```
 2. **Crawl data and Push data to HDFS:** 
-   After the environment is up, upload the data_crawl directory to HDFS by running:
+
+   Dataset: https://www.kaggle.com/datasets/anukaggle81/top-100-crypto-currency-historical-dataset?fbclid=IwY2xjawJcrcRleHRuA2FlbQIxMAABHaxqeuSMh9T42Brh7yH5fESgCZ6IQvQX53OOrCtBYux2vNMRsjOf-YgHyg_aem_H6-qacApzr12dDKNW-2QvQ
+
+   After the environment is up, download data from kaggle then save to data_crawl folder then upload the data_crawl directory to HDFS by running:
    ```bash
-   python ./crawl-code/crawl-crypto.py
    make push2hdfs
+   ```
 3. **Access Jupyter Notebook:**
    To retrieve the Jupyter Notebook server token and access the interface, run:
    ```bash 
    make jupyter-token
+   ```
 4. **Stop the environment:**
    To stop all running Docker containers and services, use the following command:
    ```bash
    make down
-
+   ```
 ## Connect Apache Hive to PowerBI in Windows
 
 Source: https://medium.com/emorphis-technologies/how-to-connect-microsoft-power-bi-with-hive-a778a1fdd234
