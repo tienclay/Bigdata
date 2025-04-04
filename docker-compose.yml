@@ -134,6 +134,7 @@ networks:
   default:
     driver: bridge
 
+
 volumes:
   hadoop_namenode:
   hadoop_datanode1:
