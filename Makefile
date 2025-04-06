@@ -26,4 +26,4 @@ up: .update-env
 	
 down:
 	@echo "Stopping Docker Compose..."
-	docker compose down
+	docker compose down -v

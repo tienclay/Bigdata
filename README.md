@@ -80,7 +80,7 @@ Source: https://medium.com/emorphis-technologies/how-to-connect-microsoft-power-
 
 1. **Download Hive OBDC Driver:**
    From this link: https://www.microsoft.com/en-us/download/details.aspx?id=40886
-2. **Config ODBSC:**
+2. **Config ODBC:**
    
    Go to the Configure: 
 
