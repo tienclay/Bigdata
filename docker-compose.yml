@@ -112,6 +112,7 @@ services:
       SERVICE_PRECONDITION: "hive-metastore:9083"
     ports:
       - "10000:10000"
+      - "10002:10002"
 
   hive-metastore:
     image: bde2020/hive:2.3.2-postgresql-metastore

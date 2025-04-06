@@ -1,6 +1,9 @@
-# README for Docker-based Big Data Project
+# README for DataSphere Project
+This project is designed to manage a comprehensive data environment, combining both **big data processing** and **data warehousing** using Docker, Hadoop, Apache Hive, Apache Spark, and Jupyter Notebook. The platform enables the storage, processing, and analysis of large-scale datasets while also facilitating structured data management for business intelligence.
 
-This project is designed to manage a big data environment using Docker, Hadoop, Apache Spark, and Jupyter Notebook. The Makefile provided automates several tasks such as starting and stopping Docker containers, updating environment variables, and interacting with HDFS.
+The project utilizes Docker-based images from the [Big Data Europe](https://github.com/big-data-europe) repository. These images are pre-configured for deploying Hadoop, Apache Hive, and Apache Spark, making it easier to set up and manage a big data ecosystem.
+
+The Makefile provided automates several tasks such as starting and stopping Docker containers, updating environment variables, and interacting with HDFS, ensuring a smooth workflow for data processing and analytics.
 
 ## Table of Contents
 
@@ -65,6 +68,7 @@ Stops and removes the running Docker containers associated with the project.
    ```bash
    make push2hdfs
    ```
+   **NOTE**: Ensure that you upload the data to HDFS before checking the service status. This helps the namenode exit safemode, allowing the ResourceManager and other services to connect to the namenode when it exits safemode.
 3. **Access Jupyter Notebook:**
    To retrieve the Jupyter Notebook server token and access the interface, run:
    ```bash 
@@ -107,6 +111,9 @@ Stops and removes the running Docker containers associated with the project.
    ![spark](images/spark.png) 
 
 - **Hive Server:**  
+   To verify the Hiveserver2 service, visit:  
+   [http://localhost:10002/](http://localhost:10002/). If it’s running, you’ll see the Hive Web UI.
+   ![hive-web](images/hive-web.png) 
    You can also check by connecting directly to the hive-server container and use the beeline command to interact with Hive:   
    ```bash
    docker exec -it hive-server /bin/bash
