@@ -1,4 +1,4 @@
-# README for DataSphere Project
+# DataSphere Project
 This project is designed to manage a comprehensive data environment, combining both **big data processing** and **data warehousing** using Docker, Hadoop, Apache Hive, and Spark Jupyter Notebook. The platform enables the storage, processing, and analysis of large-scale datasets while also facilitating structured data management for business intelligence.
 
 The project utilizes Docker-based images from the [Big Data Europe](https://github.com/big-data-europe) repository. These images are pre-configured for deploying Hadoop, Apache Hive, and Spark Jupyter Notebook, making it easier to set up and manage a big data ecosystem.
@@ -7,12 +7,19 @@ The Makefile provided automates several tasks such as starting and stopping Dock
 
 ## Table of Contents
 
-1. [Requirements](#requirements)
-2. [Makefile Targets](#makefile-targets)
-3. [Architecture](#architecture)
-4. [How to Setup](#how-to-setup)
-5. [Check Services Status](#check-services-status)
-5. [Connect Apache Hive to PowerBI in Windows](#connect-apache-hive-to-powerbi-in-windows)
+1. [Project Overview](#project-overview)
+2. [Requirements](#requirements)
+3. [Makefile Targets](#makefile-targets)
+4. [Architecture](#architecture)
+5. [How to Setup](#how-to-setup)
+6. [Check Services Status](#check-services-status)
+7. [Connect Apache Hive to PowerBI in Windows](#connect-apache-hive-to-powerbi-in-windows)
+
+## Project Overview
+
+The cryptocurrency market is highly volatile and challenging to predict, making it difficult for investors to identify trends and make informed investment decisions. This project aims to address these challenges by analyzing data from the top 100 cryptocurrencies, including Bitcoin, Ethereum, Binance Coin, and others. The primary goal is to develop prediction models to forecast price fluctuations and assist investors in making more effective decisions while minimizing risks.
+
+The project involves collecting and processing large datasets of the top 100 cryptocurrencies, analyzing key factors affecting price volatility, and building prediction models based on historical data. The models will predict price movements for the next day based on past trends.
 
 ## Requirements
 
