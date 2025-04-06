@@ -1,7 +1,7 @@
 # README for DataSphere Project
-This project is designed to manage a comprehensive data environment, combining both **big data processing** and **data warehousing** using Docker, Hadoop, Apache Hive, Apache Spark, and Jupyter Notebook. The platform enables the storage, processing, and analysis of large-scale datasets while also facilitating structured data management for business intelligence.
+This project is designed to manage a comprehensive data environment, combining both **big data processing** and **data warehousing** using Docker, Hadoop, Apache Hive, and Spark Jupyter Notebook. The platform enables the storage, processing, and analysis of large-scale datasets while also facilitating structured data management for business intelligence.
 
-The project utilizes Docker-based images from the [Big Data Europe](https://github.com/big-data-europe) repository. These images are pre-configured for deploying Hadoop, Apache Hive, and Apache Spark, making it easier to set up and manage a big data ecosystem.
+The project utilizes Docker-based images from the [Big Data Europe](https://github.com/big-data-europe) repository. These images are pre-configured for deploying Hadoop, Apache Hive, and Spark Jupyter Notebook, making it easier to set up and manage a big data ecosystem.
 
 The Makefile provided automates several tasks such as starting and stopping Docker containers, updating environment variables, and interacting with HDFS, ensuring a smooth workflow for data processing and analytics.
 
@@ -17,7 +17,7 @@ The Makefile provided automates several tasks such as starting and stopping Dock
 ## Requirements
 
 - Docker and Docker Compose installed
-- Apache Spark, Jupyter Notebook, and Hadoop containers setup
+- Apache Hadoop, Apache Hive, Spark Jupyter Notebook and relative containers setup
 - Docker-based environment for running Spark jobs and Jupyter Notebooks
 - A directory containing data to be processed (`./data_crawl`)
 - Power BI on Windows for visualization
